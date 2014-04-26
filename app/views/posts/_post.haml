@@ -1,0 +1,20 @@
+.panel.panel-default
+  .panel-heading
+    = link_to post.user do
+      %span.glyphicon.glyphicon-user
+      = post.user.username
+    - if current_user && post.user == current_user
+      .delete-post.pull-right
+        = link_to post, method: :delete, data: { confirm: 'Are you sure?' } do
+          %span.glyphicon.glyphicon-remove-circle
+    %span.comment-date.pull-right
+      = time_ago_in_words(post.created_at) + ' ago'
+  .panel-body
+    .row
+      .col-md-12
+        %h3
+          = link_to post.title, post
+    .row
+      .col-md-12
+        = simple_format sanitize(post.body, tags: %w(b i strong en), attributes: nil)
+        

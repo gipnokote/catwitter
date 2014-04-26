@@ -1,0 +1,8 @@
+%h1 All users
+
+- @users.recent.each do |user|
+  .row.white
+    .col-md-3
+      = link_to user do
+        %span.glyphicon.glyphicon-user
+        = user.username

@@ -1,0 +1,38 @@
+.buffer-left-minus-15
+  - if object.comments.count > 0
+    .bottom-buffer-50
+      .subpage-title
+        %h5= t('shared.comments.comment', count: object.comments.count)
+
+      - object.comments.each do |comment|
+        - if comment.user
+          .panel.panel-warning
+            .panel-heading
+              = link_to comment.user do
+                %span.glyphicon.glyphicon-user
+                = comment.user.username
+              %span.comment-date.pull-right
+                %span.glyphicon.glyphicon-time
+                = time_ago_in_words comment.created_at
+                ago
+                - if current_user && comment.user == current_user
+                  = link_to comment, method: :delete, data: { confirm: 'Are you sure?' }, remote: true do
+                    %span.glyphicon.glyphicon-remove-circle
+            .panel-body
+              = simple_format sanitize(comment.comment,  tags: %w(b i strong en), attributes: nil)
+
+  - if current_user
+    = form_for @comment, html: { class: 'comment-form', role: 'form', remote: true } do |f|
+      .subpage-title
+        %h5 Add comment
+      = hidden_field_tag :object_type, object.class.name
+      = hidden_field_tag :object_id, object.id
+      = f.text_area :comment, class: 'form-control', rows: 5
+
+      .form-group.top-buffer-20
+        %button.btn.btn-default.fixed-150{:type=>'submit'}
+          %span.glyphicon.glyphicon-ok
+          Submit
+  - else
+    .subpage-title
+      %h5 Sign in to comment

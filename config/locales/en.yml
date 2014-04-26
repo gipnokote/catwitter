@@ -1,0 +1,31 @@
+en:
+  shared:
+    comments:
+      ago: ago
+      add_comment: Add comment
+      comment:
+        one: "%{count} comment"
+        few: "%{count} comments"
+        other: "%{count} comments"
+      sign_in_to_comment: Sign in to comment
+
+  devise:
+    registrations:
+      new:
+        sign_up: Sign up
+    sessions:
+      new:
+        username: Username
+        email: Email
+        password: Password
+        login: Log in
+
+  home:
+    index:
+      hello: Hello! :)
+
+  layouts:
+    top_nav:
+      sign_out: Sign out
+      sign_up: Sign up
+      sign_in: Sign in

@@ -1,0 +1,11 @@
+.centered-wrapper
+  .signin
+    .signin-logo
+      = image_tag 'catwitter_logo.png'
+    .signin-border
+      = form_for resource, :as => resource_name, :url => session_path(resource_name), html: {class: 'form-signin', role: 'form'} do |f|
+        = f.text_field :username, :autofocus => true, placeholder: t('.username'), class: 'form-control', required: true, autofocus: true
+        = f.password_field :password, placeholder: t('.password'), class: 'form-control', required: true
+
+        %button.btn.btn-lg.btn-primary.btn-yat.btn-large.btn-block
+          Login

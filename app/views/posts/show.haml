@@ -1,0 +1,4 @@
+= render partial: 'post', locals: {post: @post}
+
+#comments.top-buffer-50
+  = render partial: 'shared/comments', locals: {object: @post}

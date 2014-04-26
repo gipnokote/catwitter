@@ -1,0 +1,31 @@
+%ul.nav.navbar-nav.pull-right
+  - if current_user
+    %li{:class=>(request.path == new_post_path ? 'active':'')}
+      = link_to new_post_path do
+        %span.glyphicon.glyphicon-bullhorn
+        New post
+    %li{:class=>(request.path == home_path ? 'active':'')}
+      = link_to home_path do
+        %span.glyphicon.glyphicon-star
+        Friend feed
+    %li{:class=>(request.path == users_path ? 'active':'')}
+      = link_to users_path do
+        %span.glyphicon.glyphicon-th
+        All users
+    %li{:class=>(request.path == profile_path ? 'active':'')}
+      = link_to profile_path do
+        %span.glyphicon.glyphicon-user
+        = current_user.username
+    %li
+      = link_to sign_out_path(:authenticity_token => form_authenticity_token()), method: :delete do
+        %span.glyphicon.glyphicon-log-out
+        Sign out
+  - else
+    %li{:class=>(request.path == sign_up_path ? 'active':'')}
+      = link_to sign_up_path do
+        %span.glyphicon.glyphicon-check
+        Sign up
+    %li{:class=>(request.path == sign_in_path ? 'active':'')}
+      = link_to sign_in_path do
+        %span.glyphicon.glyphicon-log-in
+        Sign in

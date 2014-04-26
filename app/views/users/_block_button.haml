@@ -1,0 +1,8 @@
+- if current_user.blocking?(@user)
+  = button_to [:unblock, @user], class: 'btn btn-default fixed-150', data: {disable_with: 'Processing...'}, remote: true do
+    %span.glyphicon.glyphicon-remove-circle
+    Unblock
+- else
+  = button_to [:block, @user], class: 'btn btn-default fixed-150', data: {disable_with: 'Processing...'}, remote: true do
+    %span.glyphicon.glyphicon-star
+    Block

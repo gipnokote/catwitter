@@ -1,0 +1,185 @@
+html, body, .yatbody {
+  min-height: 100%;
+  height: 100%;
+}
+
+html {
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 70px;
+  padding-bottom: 50px;
+  height: 100%;
+  color: #fff;
+  background-color: #2c95c9;
+}
+
+.white a,
+.white a:focus,
+.white a:hover{
+  color: #fff;
+}
+
+a.dot,
+a.dot:focus,
+a.dot:hover{
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+h4 {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  padding-top: 5px;
+}
+
+.signin-border {
+  width: 100%;
+  background-color: #12709e;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.signin {
+  width: 400px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.signin-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.centered-wrapper {
+  display: table;
+  min-height: 100%;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: 60px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #667;
+}
+
+.form-signin input[type="password"] {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: #bfeaff;
+}
+
+.form-signin button {
+  height: 60px;
+}
+
+.form-control {
+  border-style: none !important;
+}
+
+.btn {
+  border-style: none !important;
+}
+
+.btn-yat {
+  background-color: #5bb7e4;
+}
+
+.help-block {
+  color: #eee;
+}
+
+.btn-primary{
+  background-color: #5bb7e4;
+}
+
+.alert {
+  text-shadow: none;
+}
+
+.table > tbody > tr > th, .table > tbody > tr > td {
+  border-top: none;
+}
+.table > thead > tr > th {
+  border-bottom: none;
+}
+
+.panel-body{
+  color: #333;
+}
+
+.bottom-buffer-40 {
+  padding-bottom: 40px;
+}
+
+.fixed-150 {
+  width: 150px;
+}
+
+.delete-post {
+  margin-left: 20px;
+}
+
+.top-buffer-20 {
+  margin-top:20px; 
+}
+
+.top-buffer-30 {
+  margin-top:20px; 
+}
+
+.top-buffer-50 {
+  margin-top:50px; 
+}
+
+.top-buffer-80 {
+  margin-top:80px; 
+}
+
+.bottom-buffer-10 {
+  margin-bottom:10px;
+}
+
+.bottom-buffer-20 {
+  margin-bottom:20px;
+}
+
+.bottom-buffer-50 {
+  margin-bottom:50px;
+}
+.right-buffer-15 {
+  margin-right: 15px;
+}
+
+.right-buffer-5 {
+  margin-right: 5px;
+}
+
+.bottom-buffer-20 {
+  margin-bottom: 20px;
+}

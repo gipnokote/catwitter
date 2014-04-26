@@ -1,0 +1,8 @@
+- if current_user
+  %h1.shadow Friend feed
+
+  - @posts.each do |post|
+    = render partial: 'post', locals: {post: post}
+- else
+  .centered-wrapper.white
+    Please <a href='/sign_up'>sign up</a> or <a href='sign_in'>sign in</a> to see the posts!

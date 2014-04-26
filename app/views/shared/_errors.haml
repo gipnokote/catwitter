@@ -1,0 +1,6 @@
+- if model.errors.any?
+  #error_explanation
+    %h2 Following fields contain errors:
+    %ul
+      - model.errors.full_messages.each do |msg|
+        %li= msg
