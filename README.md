@@ -41,7 +41,31 @@ rake db:migrate
 ```
 
 Login details
------
+-------------
 
 If you don't want to register a user (although it's very easy and doesn't require email),
 you can use this account: Wolverine / 123
+
+Task description
+----------------
+
+```
+I would like to see how you’d build the following Twitter thingy in Rails:
+ 
+Build an app, where a user can log in and perhaps edit his account (username, real name etc.)
+ 
+The following features needs to be available to the user:
+ 
+  - Add friend (from other users)
+  - Remove friend (from friend list)
+ 
+  - Post a message
+  - Show all messages from friends
+ 
+  - Ability to lookup another user and see his posts
+ 
+You might add the following as well:
+ 
+  - A user can block another user, so that other user can’t see his posts or add him as friend
+  - Users can comment on posts
+```
